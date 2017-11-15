@@ -1,0 +1,71 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("http://bayoakomolafe.net/wp-content/uploads/2015/11/MOUNTAINS-4-of-11.jpg");
+  padding: 15px;
+  width: auto;
+  margin: auto;
+  padding-top: 10%;
+  text-align: center;
+}
+form {
+  font-size: 150%;
+  
+}
+#hey{
+  background-color: lightgrey;
+  padding:10px;
+  width:50%;
+  margin:auto;
+  
+}
+a {
+  color: #00B7FF;
+}
+h1{
+  color:lightgrey;
+  font-size:30px;
+  text-align: center;
+  border-bottom:2px solid lightgrey;
+}
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color:grey;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 20x;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
