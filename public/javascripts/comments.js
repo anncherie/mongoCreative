@@ -1,10 +1,10 @@
 $(document).ready(function(){
   $("#postComment").click(function(){
-      var myobj = {Name:$("#name").val(),Comment:$("#comment").val()};
+      var myobj = {Name:$("#name").val(),Comment:$("#comment1").val()};
       jobj = JSON.stringify(myobj);
       $("#json").text(jobj);
   
-      var url = "comment1";
+      var url = "comment";
 	$.ajax({
 		url:url,
 		type: "POST",
