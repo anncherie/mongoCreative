@@ -55,16 +55,16 @@ router.get('/comment3',function(req,res,next) {
 	});
 });
 
-router.delete('/comment',function(req,res,next) {
-	console.log("delete");
-	Comment.remove(function(err) {
-		if(err) return console.error(err);	
-		else {
-			console.log("Delete worked");
-			res.sendStatus(200);
-		}
-	});
-});
+// router.delete('/comment',function(req,res,next) {
+// 	console.log("delete");
+// 	Comment.remove(function(err) {
+// 		if(err) return console.error(err);	
+// 		else {
+// 			console.log("Delete worked");
+// 			res.sendStatus(200);
+// 		}
+// 	});
+// });
 
 router.post('/comment',function(req,res,next) {
 	console.log("comment");
