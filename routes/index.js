@@ -8,6 +8,8 @@ var commentSchema = mongoose.Schema({
 });
 
 var Comment = mongoose.model('Comment',commentSchema);
+var Comment2 = mongoose.model('Comment2', commentSchema);
+var Comment3 = mongoose.model('Comment3', commentSchema);
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console,'connection error:'));
@@ -33,7 +35,7 @@ router.get('/comment1',function(req,res,next) {
 
 router.get('/comment2',function(req,res,next) {
 	console.log("comment");
-	Comment.find(function(err,commentList) {
+	Comment2.find(function(err,commentList) {
 		if(err) return console.error(err);
 		else {
 			console.log(commentList);
@@ -57,6 +59,17 @@ router.post('/comment',function(req,res,next) {
 	console.log("comment");
 	console.log(req.body);
 	var newcomment = new Comment(req.body);
+	newcomment.save(function(err,post) {
+		if(err) return console.error(err);
+		console.log(post);
+		res.sendStatus(200); 
+	});
+});
+
+router.post('/comment2',function(req,res,next) {
+	console.log("comment");
+	console.log(req.body);
+	var newcomment = new Comment2(req.body);
 	newcomment.save(function(err,post) {
 		if(err) return console.error(err);
 		console.log(post);
