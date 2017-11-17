@@ -20,7 +20,7 @@ router.get('/fake',function(req,res,next) {
 	res.json(fakelist);
 });
 
-router.get('/comment',function(req,res,next) {
+router.get('/comment1',function(req,res,next) {
 	console.log("comment");
 	Comment.find(function(err,commentList) {
 		if(err) return console.error(err);
