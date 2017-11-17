@@ -4,7 +4,7 @@ $(document).ready(function(){
       jobj = JSON.stringify(myobj);
       $("#json").text(jobj);
   
-      var url = "comment";
+      var url = "comment1";
 	$.ajax({
 		url:url,
 		type: "POST",
@@ -23,7 +23,7 @@ $(document).ready(function(){
       jobj = JSON.stringify(myobj);
       $("#json2").text(jobj);
   
-      var url = "comment";
+      var url = "comment2";
 	$.ajax({
 		url:url,
 		type: "POST",
@@ -56,7 +56,7 @@ $(document).ready(function(){
       var everything = "<ul>";
       for(var comment2 in data) {
         com = data[comment2];
-        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + "</li>";
+        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment2 + "</li>";
       }
       everything += "</ul>";
       $("#comments2").html(everything);
