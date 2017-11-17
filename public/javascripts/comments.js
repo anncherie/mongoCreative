@@ -35,6 +35,24 @@ $(document).ready(function(){
 	})
 	
       });
+
+  $("#postComment3").click(function(){
+    var myobj = {Name:$("#name3").val(),Comment:$("#comment3").val()};
+    jobj = JSON.stringify(myobj);
+    $("#json3").text(jobj);
+
+    var url = "comment3";
+$.ajax({
+  url:url,
+  type: "POST",
+  data: jobj,
+  contentType: "application/json; charset=utf-8",	
+  success: function(data,textStatus) {
+      $("#done3").html(textStatus);
+  }   
+})
+
+    });
   
   $("#getComments").click(function() {
   $.getJSON('comment1', function(data) {
@@ -60,6 +78,19 @@ $(document).ready(function(){
       }
       everything += "</ul>";
       $("#comments2").html(everything);
+    });
+  });
+
+    $("#getComments3").click(function() {
+  $.getJSON('comment3', function(data) {
+      console.log(data);
+      var everything = "<ul>";
+      for(var comment2 in data) {
+        com = data[comment2];
+        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + "</li>";
+      }
+      everything += "</ul>";
+      $("#comments3").html(everything);
     });
   });
 

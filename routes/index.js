@@ -44,6 +44,17 @@ router.get('/comment2',function(req,res,next) {
 	});
 });
 
+router.get('/comment3',function(req,res,next) {
+	console.log("comment");
+	Comment3.find(function(err,commentList) {
+		if(err) return console.error(err);
+		else {
+			console.log(commentList);
+			res.json(commentList);
+		}
+	});
+});
+
 router.delete('/comment',function(req,res,next) {
 	console.log("delete");
 	Comment.remove(function(err) {
@@ -70,6 +81,17 @@ router.post('/comment2',function(req,res,next) {
 	console.log("comment");
 	console.log(req.body);
 	var newcomment = new Comment2(req.body);
+	newcomment.save(function(err,post) {
+		if(err) return console.error(err);
+		console.log(post);
+		res.sendStatus(200); 
+	});
+});
+
+router.post('/comment3',function(req,res,next) {
+	console.log("comment");
+	console.log(req.body);
+	var newcomment = new Comment3(req.body);
 	newcomment.save(function(err,post) {
 		if(err) return console.error(err);
 		console.log(post);
