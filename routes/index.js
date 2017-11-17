@@ -31,6 +31,17 @@ router.get('/comment1',function(req,res,next) {
 	});
 });
 
+router.get('/comment2',function(req,res,next) {
+	console.log("comment");
+	Comment.find(function(err,commentList) {
+		if(err) return console.error(err);
+		else {
+			console.log(commentList);
+			res.json(commentList);
+		}
+	});
+});
+
 router.delete('/comment',function(req,res,next) {
 	console.log("delete");
 	Comment.remove(function(err) {
