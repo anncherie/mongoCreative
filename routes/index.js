@@ -66,7 +66,7 @@ router.post('/comment',function(req,res,next) {
 	});
 });
 
-router.post('/comment',function(req,res,next) {
+router.post('/comment2',function(req,res,next) {
 	console.log("comment");
 	console.log(req.body);
 	var newcomment = new Comment2(req.body);
