@@ -18,7 +18,7 @@ $(document).ready(function(){
       });
   
   $("#getComments").click(function() {
-  $.getJSON('comment1', function(data) {
+  $.getJSON('comment', function(data) {
       console.log(data);
       var everything = "<ul>";
       for(var comment in data) {
