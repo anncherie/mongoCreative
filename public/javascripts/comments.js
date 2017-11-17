@@ -21,8 +21,8 @@ $(document).ready(function(){
   $.getJSON('comment1', function(data) {
       console.log(data);
       var everything = "<ul>";
-      for(var comment in data) {
-        com = data[comment];
+      for(var comment1 in data) {
+        com = data[comment1];
         everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + "</li>";
       }
       everything += "</ul>";
