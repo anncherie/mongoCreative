@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 
   $("#postComment2").click(function(){
-      var myobj = {Name:$("#name2").val(),Comment:$("#comment2").val()};
+      var myobj = {Name:$("#name2").val(),Comment:$("#comments2").val()};
       jobj = JSON.stringify(myobj);
       $("#json2").text(jobj);
   
