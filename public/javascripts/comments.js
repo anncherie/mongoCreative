@@ -2,7 +2,7 @@ $(document).ready(function(){
   $("#postComment").click(function(){
       var myobj = {Name:$("#name").val(),Comment:$("#comment").val()};
       jobj = JSON.stringify(myobj);
-      $("#json").text(jobj);
+      $("#json1").text(jobj);
   
       var url = "comment";
 	$.ajax({
@@ -11,7 +11,7 @@ $(document).ready(function(){
 		data: jobj,
 		contentType: "application/json; charset=utf-8",	
 		success: function(data,textStatus) {
-    		$("#done").html(textStatus);
+    		$("#done1").html(textStatus);
 	}
 	})
 	
@@ -26,7 +26,7 @@ $(document).ready(function(){
         everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + "</li>";
       }
       everything += "</ul>";
-      $("#comments").html(everything);
+      $("#comments1").html(everything);
     });
   });
 
