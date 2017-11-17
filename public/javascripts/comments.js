@@ -87,7 +87,7 @@ $.ajax({
       var everything = "<ul>";
       for(var comment2 in data) {
         com = data[comment2];
-        everything += "<li> Name: " + com.Name + " -- Captio: " + com.Comment + "</li>";
+        everything += "<li> Name: " + com.Name + " -- Caption: " + com.Comment + "</li>";
       }
       everything += "</ul>";
       $("#comments3").html(everything);
